@@ -1,48 +1,67 @@
 <!DOCTYPE html>
-<html lang="en-ua">
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Портфоліо Графічного Дизайнера</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <main>
-        <section>
-            <h2>My Portfolio</h2>
-            <article>
-                <h3><a href="lab1/enterprise.html">Lab1</a></h3>
-                <p>Створення WEB-сторінок мовою HTML</p>
-            </article>
-            <article>
-                <h3><a href="lab2/resume.html">Lab2</a></h3>
-                <p>Розробка сторінки резюме</p>
-            </article>
-        </section>
+    <header>
+        <div class="logo"><img src="img/nike-logo.png" alt="nike"></div>
+        <nav>
+          <a href="#about">Про мене</a>
+          <a href="#portfolio">Портфоліо</a>
+          <a href="#contacts">Контакти</a>
+        </nav>
+      </header>
+    
+      <main>
+        <div class="image-container" id="portfolio">
+          <img src="img/proxy-image.jpg" alt="Bombardiro Crocodilo">
+        </div>
+    
+        <button class="portfolio-button"><a href="https://youtu.be/NrUP9FCS0RU" target="_blank">Переглянути портфоліо</a></button>
+    
+        <hr />
+    
+        <section class="description-skills">
+            <div class="description">
+              <h2>Про мене</h2>
+              <p>Я крутий дизайнер, написав логотип найк.</p>
+              <p>Маю навички роботи з Adobe Photoshop, Illustrator, Figma та іншими інструментами.</p>
+            </div>
 
-        <section>
-            <h2>Work Experience</h2>
-            <article>
-                <h3>Traveling Sales Representative</h3>
-                <p>UW - <time datetime="2025-01">January 2025</time> to Present</p>
-                <p>мене тягають як раба по магазинам робити якісь менеджерські штуки</p>
-            </article>
-        </section>
+            <hr />
+          
+            <section class="skills-section">
+                <h2>Навички</h2>  <!-- Заголовок зверху -->
+              
+                <div class="skills-content">
+                  <div class="skills-left">
+                    <p>У мене є сертифікат для вилочного погрузчика.</p>
+                  </div>
+                  <div class="skills-right">
+                    <ul>
+                      <li>Керування вилочним погрузчиком</li>
+                      <li>Ілюстрації</li>
+                      <li>UI/UX дизайн</li>
+                      <li>Продам контейнер</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+          </section>
+          
+      </main>
 
-        <section>
-            <h2>Education</h2>
-            <article>
-                <h3>Bachelor's Degree</h3>
-                <p>College of Electronic Devices - 
-                    <time datetime="2022-09">September 2022</time> to 
-                    <time datetime="2026-07">July 2026</time>
-                </p>
-            </article>
-        </section>
-    </main>
+      
+    
+      <footer id="contacts">
+        Перета Сергій | Варіант - 21
+      </footer>
+    
 
-    <footer>
-        <p>Contact information: <a href="mailto:serhii.pereta-pi2202@kep.nung.edu.ua">serhii.pereta-pi2202@kep.nung.edu.ua</a></p>
-        <p>&copy; 2025 Serhii. All rights reserved.</p>
-    </footer>
 </body>
 </html>
