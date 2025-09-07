@@ -3,10 +3,19 @@
 
 /*
 #fd7e14 orange
-#f8f9fa white
+#f8f9fa grey
 font-family: "Poppins", sans-serif;
 font-family: "Inter", sans-serif;
 
+*/
+
+/*
+break-points:
+a) Mobile devices – 320px—480px
+b) iPads, Tablets – 481px—768px
+c) Small screens, laptops – 769px—1024px
+d) Desktops, large screens – 1025px—1200px
+e) Extra large screens, TV – 1201px, and more
 */
 
 * {
@@ -22,10 +31,72 @@ font-family: "Inter", sans-serif;
 
 .content-wrap {
   max-width: 1920px;
+  margin: auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
 }
 
 .contact {
-  font-family: "Poppins", sans-serif;
-  width: 1296px;
-  height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.contact-item img {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 88px;
+  max-width: fit-content;
+  border-radius: 40px;
+  background-color: white;
+  font-size: 20px;
+  font-style: bold;
+  gap: 24px;
+  padding-top: 24px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 24px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000000;
+}
+
+nav a.active {
+  text-decoration: none;
+  color: #fd7e14;
+  border-bottom: 3px solid #fd7e14;
+  padding-bottom: 2px;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #fd7e14;
+}
+
+.logo {
+  width: 127.27px;
+  height: 30px;
+  gap: 8px;
 }
