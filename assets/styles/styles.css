@@ -31,7 +31,7 @@ e) Extra large screens, TV – 1201px, and more
 
 .content-wrap {
   max-width: 1920px;
-  margin: auto;
+  margin: 0;
   padding: 20px;
   font-family: "Poppins", sans-serif;
 }
@@ -60,16 +60,21 @@ nav {
   display: flex;
   align-items: center;
   height: 88px;
-  max-width: fit-content;
+  max-width: 1296px;
   border-radius: 40px;
   background-color: white;
   font-size: 20px;
   font-style: bold;
   gap: 24px;
-  padding-top: 24px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 24px;
+  padding: 24px, 40px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+nav ul:last-child {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 nav ul {
@@ -81,6 +86,32 @@ nav ul {
 nav a {
   text-decoration: none;
   color: #000000;
+}
+
+nav img {
+  height: 30px;
+  width: 30px;
+}
+
+.search {
+  width: 280px;
+  height: 40px;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 9px 5px 9px 16px;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.search-text {
+  opacity: 0.6;
+}
+
+.search img {
+  height: 28px;
+  width: 28px;
 }
 
 nav a.active {
@@ -95,8 +126,19 @@ nav a:hover {
   color: #fd7e14;
 }
 
-.logo {
+.logo img {
   width: 127.27px;
   height: 30px;
   gap: 8px;
+}
+
+.menu {
+  flex: 1;
+  text-align: center;
+}
+
+.menu ul {
+  display: inline-flex;
+  list-style: none;
+  gap: 15px;
 }
