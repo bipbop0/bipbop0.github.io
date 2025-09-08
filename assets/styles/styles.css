@@ -236,7 +236,7 @@ nav a:hover {
   bottom: 50%;
 }
 
-/* Tablet (481px+) */
+/* Tablet (481px+) broken*/
 @media (min-width: 481px) {
   .contact {
     flex-direction: row;
@@ -245,20 +245,6 @@ nav a:hover {
     gap: 20px;
     height: 72px;
     padding: 12px 0 12px 24px;
-  }
-
-  .contact-left,
-  .contact-right {
-    flex-direction: row;
-    gap: 20px;
-  }
-
-  .contact-left {
-    margin-left: 50px;
-  }
-
-  .contact-right {
-    margin-right: 50px;
   }
 
   nav {
@@ -284,28 +270,8 @@ nav a:hover {
   }
 }
 
-/* Laptops/Small Screens (769px+) */
+/* Laptops/Small Screens (769px+) broken*/
 @media (min-width: 769px) {
-  .burger-menu {
-    display: none;
-  }
-
-  .menu {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .menu ul {
-    flex-direction: row;
-    display: inline-flex;
-  }
-
-  .menu ul li a {
-    margin-right: 20px;
-  }
-
   .contact-left {
     margin-left: 75px;
   }
@@ -314,25 +280,9 @@ nav a:hover {
     margin-right: 75px;
   }
 
-  nav {
-    height: 88px;
-    max-width: 1000px;
-    border-radius: 40px;
-    padding: 24px 40px;
-    font-size: 1.25rem;
-    gap: 24px;
-  }
-
   .logo img {
     width: 127.27px;
     height: 30px;
-  }
-
-  .search {
-    width: 280px;
-    height: 40px;
-    border-radius: 20px;
-    padding: 9px 5px 9px 16px;
   }
 
   nav img {
@@ -353,12 +303,78 @@ nav a:hover {
 
 /* Desktops/Large Screens (1025px+) */
 @media (min-width: 1025px) {
+  .content-wrap {
+    max-width: 1920px;
+    margin: 0;
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+  }
   nav {
     max-width: 1200px;
+    border-radius: 40px;
+    padding: 24px 40px;
+    font-size: 1.25rem;
+    gap: 24px;
+    flex-wrap: nowrap;
+  }
+
+  nav img {
+    height: 30px;
+    width: 30px;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  .logo img {
+    margin-top: 5px;
+    width: 127.27px;
+    height: 30px;
+  }
+
+  .search {
+    width: 280px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 9px 5px 9px 16px;
+  }
+
+  .search img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .search-text {
+    font-size: 1rem;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .menu ul {
+    flex-direction: row;
+    display: inline-flex;
+  }
+  .menu ul li a {
+    margin-right: 20px;
   }
 
   .contact-right {
     margin-right: 100px;
+  }
+
+  .contact-left,
+  .contact-right {
+    flex-direction: row;
+  }
+
+  .contact-item img {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
   }
 }
 
