@@ -9,7 +9,6 @@
   <body>
     <section class="hero">
       <header>
-        <div class="burger-menu"></div>
         <div class="content-wrap">
           <div class="contact">
             <div class="contact-left">
@@ -29,8 +28,8 @@
               </div>
             </div>
           </div>
-          <div class="burger-menu"></div>
           <nav>
+            <div class="burger-menu"></div>
             <div class="logo">
               <img src="assets/images/hero/icons/Logo.svg" alt="" />
             </div>
@@ -40,7 +39,7 @@
                 <li><a href="#Shop">Shop</a></li>
                 <li>
                   <a
-                    href="assets/images/hero/topsecret/Rick Roll (Different link + no ads) - Duran (360p, h264).mp4"
+                    href="assets/images/hero/topsecret/secret.mp4"
                     target="_blank"
                     >About Us</a
                   >
@@ -61,13 +60,16 @@
               </li>
             </ul>
           </nav>
-          <h1>
-            Я прогавив момент з mobile-first, тому я маю переробити троха css і
-            через @media додати бургер меню для телефонів і планшетів, дякую за
-            розуміння
-          </h1>
         </div>
       </header>
     </section>
+    <script>
+      document.querySelectorAll(".burger-menu").forEach((burger) => {
+        burger.addEventListener("click", () => {
+          burger.classList.toggle("active");
+          document.querySelector(".menu").classList.toggle("active");
+        });
+      });
+    </script>
   </body>
 </html>
