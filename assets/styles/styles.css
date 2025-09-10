@@ -258,12 +258,6 @@ nav a:hover {
   right: 30%;
   z-index: -1;
 }
-.categories {
-  display: flex;
-  height: 528px;
-  max-width: 100%;
-  background-color: white;
-}
 
 .hero-frame {
   max-width: 100%;
@@ -316,6 +310,7 @@ nav a:hover {
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .categories-nav span {
