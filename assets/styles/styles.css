@@ -381,6 +381,72 @@ nav a:hover {
   flex-direction: column;
 }
 
+.featured-products {
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.featured-products h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.fp-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.fp-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.fp-card img {
+  width: 100%;
+}
+
+.fp-card:hover {
+  transform: translateY(-5px);
+}
+
+.fp-card-info {
+  background-color: #ffffff;
+  display: flex;
+}
+
+.fp-card-text {
+  font-family: "Poppins", sans-serif;
+  padding: 12px 16px;
+  width: 100%;
+}
+
+.fp-card-text h2 {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+}
+
+.fp-card-text p {
+  font-weight: 600;
+  font-size: 12px;
+  margin: 0;
+}
+
+.fp-card-info img {
+  width: 24px;
+  height: 24px;
+  margin: auto 10px;
+  cursor: pointer;
+}
+
 /* Tablet (481px+) broken*/
 @media (min-width: 481px) {
   .contact {
