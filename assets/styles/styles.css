@@ -449,17 +449,16 @@ nav a:hover {
 
 .info-block {
   background-color: #f8f9fa;
-  width: 100%;
   display: flex;
-  justify-content: flex-end; /* push text to the right */
+  width: 100%;
+  justify-content: flex-end;
   align-items: center;
-  padding: 60px 40px; /* spacing inside */
+  padding: 60px 40px;
 
-  /* background image setup */
   background-image: url("../images/info block/big-ahh-picture2.svg");
   background-repeat: no-repeat;
-  background-position: right; /* mostly left side */
-  background-size: cover; /* or 'cover' if you want full bleed */
+  background-position: 70%;
+  background-size: cover;
 }
 
 .info-block-text {
