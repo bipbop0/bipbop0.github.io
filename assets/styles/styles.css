@@ -264,7 +264,7 @@ nav a:hover {
   margin: 0 auto;
   padding: 10px;
   margin-top: 40px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-frame h3 {
@@ -445,6 +445,48 @@ nav a:hover {
   height: 24px;
   margin: auto 10px;
   cursor: pointer;
+}
+
+.info-block {
+  background-color: #f8f9fa;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* push text to the right */
+  align-items: center;
+  padding: 60px 40px; /* spacing inside */
+
+  /* background image setup */
+  background-image: url("../images/info block/big-ahh-picture2.svg");
+  background-repeat: no-repeat;
+  background-position: right; /* mostly left side */
+  background-size: cover; /* or 'cover' if you want full bleed */
+}
+
+.info-block-text {
+  display: flex;
+  max-width: 80%;
+  padding-left: 90px;
+  flex-direction: column;
+  justify-content: right;
+  text-align: left;
+  z-index: 1;
+}
+
+.info-block-text h4 {
+  margin-bottom: 10px;
+}
+
+.info-block-text h1 {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.info-block-text h3 {
+  margin-bottom: 30px;
+}
+
+.info-block-text button {
+  width: 180px;
 }
 
 /* Tablet (481px+) broken*/
