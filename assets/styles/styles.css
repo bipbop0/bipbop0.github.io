@@ -650,14 +650,8 @@ footer {
   margin: 30px auto 0;
 }
 
-.payment-methods {
-  display: flex;
-  gap: 10px;
-}
-
 .payment-methods img {
-  width: 40px;
-  height: 25px;
+  width: 25px;
 }
 /* TABLETS (≥481px) */
 @media (min-width: 481px) {
