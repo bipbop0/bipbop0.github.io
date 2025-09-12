@@ -669,16 +669,21 @@ footer {
 
   .menu {
     flex-direction: row;
-    display: flex !important;
+    display: flex;
     width: auto;
   }
 
   .menu ul {
     flex-direction: row;
-    gap: 20px;
+    gap: 40px;
     padding: 0;
   }
-
+  nav .menu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 0;
+  }
   .burger-menu {
     display: none;
   }
@@ -692,9 +697,13 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 /* SMALL SCREENS / LAPTOPS (≥769px) */
 @media (min-width: 769px) {
+  .contact-left,
+  .contact-right {
+    flex-direction: row;
+  }
+
   .content-wrap {
     max-width: 90%;
     padding: 20px;
