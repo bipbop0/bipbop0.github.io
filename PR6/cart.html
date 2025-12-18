@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: #f4f4f4;
+      }
+      h1 {
+        text-align: center;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        margin-bottom: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+      }
+      th {
+        background: #333;
+        color: white;
+      }
+      img {
+        max-width: 100px;
+        height: auto;
+      }
+      .total {
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: right;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 10px;
+        cursor: pointer;
+      }
+      .pay-btn {
+        background: #28a745;
+        color: white;
+        border: none;
+      }
+      .back-btn {
+        background: #6c757d;
+        color: white;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ваша корзина</h1>
+
+    <table id="cartTable">
+      <thead>
+        <tr>
+          <th>Зображення</th>
+          <th>Товар</th>
+          <th>Кількість</th>
+          <th>Ціна за шт.</th>
+          <th>Сума</th>
+          <th>Дії</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <p class="total" id="totalPrice">Загальна сума: 0 грн</p>
+
+    <div style="text-align: center">
+      <button class="back-btn" onclick="window.location.href='index.html'">
+        Повернутись до покупок
+      </button>
+      <button class="pay-btn" id="payBtn">Оплатити</button>
+    </div>
+
+    <script>
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      if (cart.length === 0) {
+        document.body.innerHTML =
+          '<h1 style="text-align:center;">Корзина пуста</h1><div style="text-align:center;"><button onclick="window.location.href=\'index.html\'">Повернутись до покупок</button></div>';
+      }
+
+      const tbody = document.querySelector("#cartTable tbody");
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+        <td><img src="${item.img}" alt="${item.name}"></td>
+        <td>${item.name}</td>
+        <td>${item.quantity}</td>
+        <td>${item.price} грн</td>
+        <td>${item.price * item.quantity} грн</td>
+        <td><button onclick="removeItem(${index})">Видалити</button></td>
+      `;
+        tbody.appendChild(row);
+        total += item.price * item.quantity;
+      });
+
+      document.getElementById(
+        "totalPrice"
+      ).textContent = `Загальна сума: ${total} грн`;
+
+      function removeItem(index) {
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        location.reload();
+      }
+
+      document.getElementById("payBtn").addEventListener("click", () => {
+        if (cart.length > 0) {
+          alert("Дякуємо за покупку! Оплата пройшла успішно.");
+          localStorage.removeItem("cart");
+          window.location.href = "index.html";
+        }
+      });
+    </script>
+  </body>
+</html>
