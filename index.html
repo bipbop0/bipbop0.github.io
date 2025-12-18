@@ -1,17 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Мої роботи</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        margin: 0;
+        padding: 40px 20px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1 {
+        color: #2c3e50;
+        margin-bottom: 40px;
+        font-size: 2.5rem;
+        text-align: center;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      .links-container {
+        max-width: 600px;
+        width: 100%;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        margin: 15px 0;
+      }
+
+      a {
+        display: block;
+        background: #ffffff;
+        color: #2c3e50;
+        text-decoration: none;
+        padding: 20px 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: center;
+      }
+
+      a:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        background: #e3f2fd;
+      }
+
+      a:active {
+        transform: translateY(0);
+      }
+
+      /* Для мобільних */
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 2rem;
+        }
+        a {
+          padding: 18px 20px;
+          font-size: 1.1rem;
+        }
+      }
+    </style>
   </head>
   <body>
-    <a href="Kursova/index.html">Kursova</a>
-    <a href="lab1/zad1.html">lab1/zad1</a>
-    <a href="lab1/zad2.html">lab1/zad2</a>
-    <a href="lab1/zad3.js">lab1/zad3</a>
-    <a href="PR1/zad1-2.js">PR1/zad1-2</a>
-    <a href="PR6/index.html">PR6/index</a>
-    <a href="lab7/zad1.js">lab7/zad1</a>
+    <h1>Мої лабораторні та практичні роботи</h1>
+
+    <div class="links-container">
+      <ul>
+        <li><a href="Kursova/index.html">Курсова робота</a></li>
+        <li><a href="lab1/zad1.html">Лаб. 1 – Привітання з prompt</a></li>
+        <li><a href="lab1/zad2.html">Лаб. 1 – Confirm та вибір кнопки</a></li>
+        <li>
+          <a href="lab1/zad3.js" target="_blank"
+            >Лаб. 1 – Таблиця множення (JS)</a
+          >
+        </li>
+        <li>
+          <a href="PR1/zad1-2.js" target="_blank"
+            >ПР 1 – Робота з масивами об'єктів</a
+          >
+        </li>
+        <li><a href="PR6/index.html">ПР 6 – Магазин (Airsoft)</a></li>
+        <li>
+          <a href="lab7/zad1.js" target="_blank"
+            >Лаб. 7 – Promise з затримкою</a
+          >
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
