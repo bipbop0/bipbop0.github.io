@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пошук максимального числа</title>
+    <link rel="icon" type="image/x-icon" href="checked.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Знайти максимальне число</h1>
+      <div class="numbers">
+        <p>15</p>
+        <p>48</p>
+        <p>23</p>
+        <p>67</p>
+        <p>9</p>
+        <p>34</p>
+      </div>
+      <button id="findMaxButton">Знайти максимум</button>
+    </div>
+
+    <!-- в скрипті ми знаходимо кнопку за айді, коли натиснуто беремо всі p, парсуємо
+    та додаємо клас highlight до найбільшого числа
+-->
+
+    <script>
+      document.getElementById("findMaxButton").addEventListener("click", () => {
+        const paragraphs = document.querySelectorAll(".numbers p");
+
+        paragraphs.forEach((p) => p.classList.remove("highlight"));
+
+        let maxValue = -Infinity;
+        let maxParagraph = null;
+
+        paragraphs.forEach((p) => {
+          const num = parseFloat(p.textContent.trim());
+          if (!isNaN(num) && num > maxValue) {
+            maxValue = num;
+            maxParagraph = p;
+          }
+        });
+
+        if (maxParagraph) {
+          maxParagraph.classList.add("highlight");
+        }
+      });
+    </script>
+  </body>
+</html>
