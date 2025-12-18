@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Привітання</title>
+  </head>
+  <body>
+    <h1>Завантажується скрипт...</h1>
+
+    <script>
+      // Діалогове вікно для вводу прізвища та імені
+      const fullName = prompt("Введіть ваше прізвище та ім'я:", "Іванов Іван");
+
+      // Якщо користувач натиснув "OK" (і ввів щось або нічого)
+      if (fullName !== null) {
+        // Очищаємо сторінку і виводимо привітання
+        document.body.innerHTML = `<h1 style="text-align: center; margin-top: 100px;">
+        Hello, ${fullName}!
+      </h1>`;
+      } else {
+        // Якщо натиснули "Відміна"
+        document.body.innerHTML = `<h1 style="text-align: center; margin-top: 100px;">
+        Ви скасували введення.
+      </h1>`;
+      }
+    </script>
+  </body>
+</html>

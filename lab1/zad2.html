@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Confirm</title>
+  </head>
+  <body>
+    <h1>Завантажується скрипт...</h1>
+
+    <script>
+      // діалогове вікно з кнопками "OK" і "Відміна"
+      const result = confirm("Натисніть одну з кнопок: OK чи Відміна");
+
+      // виводимо повідомлення залежно від натиснутої кнопки
+      let message;
+      if (result === true) {
+        message = "Ви натиснули кнопку «OK»";
+      } else {
+        message = "Ви натиснули кнопку «Відміна»";
+      }
+
+      // виводимо результат на сторінку
+      document.body.innerHTML = `<h1 style="text-align: center; margin-top: 100px;">
+      ${message}
+    </h1>`;
+    </script>
+  </body>
+</html>
